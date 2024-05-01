@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Embarcacion{% endblock %}
+
+{% block body %}
+    <h1>Embarcacion</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ embarcacion.id }}</td>
+            </tr>
+            <tr>
+                <th>Matricula</th>
+                <td>{{ embarcacion.Matricula }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ embarcacion.Nombre }}</td>
+            </tr>
+            <tr>
+                <th>Tamano</th>
+                <td>{{ embarcacion.Tamano }}</td>
+            </tr>
+            <tr>
+                <th>Bandera</th>
+                <td>{{ embarcacion.Bandera }}</td>
+            </tr>
+            <tr>
+                <th>Tipo</th>
+                <td>{{ embarcacion.Tipo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_embarcacion_index') }}">back to list</a>
+
+    <a href="{{ path('app_embarcacion_edit', {'id': embarcacion.id}) }}">edit</a>
+
+    {{ include('embarcacion/_delete_form.html.twig') }}
+{% endblock %}
