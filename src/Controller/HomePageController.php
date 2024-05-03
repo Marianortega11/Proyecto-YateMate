@@ -8,6 +8,9 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class HomePageController extends AbstractController
 {
+
+
+    
     #[Route('/home/page', name: 'app_home_page')]
     public function index(): JsonResponse
     {
