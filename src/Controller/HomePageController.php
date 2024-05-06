@@ -6,12 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 
+
 class HomePageController extends AbstractController
 {
 
 
     
-    #[Route('/home/page', name: 'app_home_page')]
+    #[Route('/', name: 'app_home_page')]
     public function index(): JsonResponse
     {
         return $this->json([
